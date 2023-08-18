@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Pazl2.Views.LoginPage"
+             Shell.NavBarIsVisible="True">
+    <ContentPage.Content>
+        <ScrollView>
+            <!--FontFamily="Comic"-->
+            <StackLayout Padding="10,0,10,0" VerticalOptions="StartAndExpand">
+                <Label Text="СПРАВКА" FontSize="20"  HorizontalOptions="Center" FontAttributes="Bold" Margin="20"/>
+               
+                <Label FontSize="1"/>
+                <StackLayout >
+                    <Label Text="   1.Перейти (боковое меню) на вкладку (1)'Настройки' и выбрать (2-обязательно) источник картинки и размер (не обязательно - по умолчанию стоит 3*3)."
+                       FontSize="17" FontFamily="Comic"/>
+                    <Image Source="SpravOne.png" Margin="20" HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="   2.Вернуться на вкладку 'Пазл' и нажать кнопку 'Создать'."
+                       FontSize="17" FontFamily="Comic"/>
+                    <Image Source="SpravTwo.png" Margin="20" HorizontalOptions="Start" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="   3.Для того что-бы перемешать пазл нажмите кнопку 'Перемешать'."
+                       FontSize="17" FontFamily="Comic"/>
+                    <Image/>
+                </StackLayout>
+                <Label FontFamily="Comic" FontSize="17" HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString >
+                            <Span/>
+                            <Span Text="4.Играйте" TextColor="DeepSkyBlue" FontAttributes="Bold"
+                                  FontSize="17"/>
+                            <Span Text=" в своё удовольствие."/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Text="Видеоинструкция -> внешняя ссылка" Clicked="Button_Clicked" Margin="20" />
+                <Label Text="АВТОР" FontSize="20"  HorizontalOptions="Center" FontAttributes="Bold" Margin="20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90*"/>
+                        <ColumnDefinition Width="25*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <Label Text="   Создатель -> Елушов Даниил ИСП-41 by(xHamelion):" 
+                       FontFamily="Comic" FontSize="18" />
+                        <Label Text="   Место обучения -> ГАПОУ АО ВИЭК - Вельский Индустриально Экономический Колледж" 
+                       FontFamily="Comic" FontSize="18" />
+                        <Label Text="   Контактный телефон -> +7(921)481-57-42" 
+                       FontFamily="Comic" FontSize="18" />
+                        <Label Text="   E-mail -> daniilelushov@mail.ru" 
+                       FontFamily="Comic" FontSize="18" />
+                    </StackLayout>
+                    <Image Source="pngwing.png" HeightRequest="300" HorizontalOptions="Start" Grid.Column="1"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                    
+                   
+                </StackLayout>
+                <Button VerticalOptions="Center" Text="Вернуться" Command="{Binding LoginCommand}"/>
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

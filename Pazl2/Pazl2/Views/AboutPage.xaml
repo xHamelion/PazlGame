@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pazl2.Views.AboutPage"
+             Title="Паззл"
+             >
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Создать" Clicked="Button_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Перемешать"  Clicked="Button_Clicked_1" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <Grid x:Name="Surializm">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="BfwA.gif" Aspect="AspectFit" IsAnimationPlaying="True" Grid.Row="1" Grid.Column="1" />
+        
+    </Grid>
+
+
+</ContentPage>

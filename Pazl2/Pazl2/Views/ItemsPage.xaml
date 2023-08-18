@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pazl2.Views.ItemsPage"
+             Title="Настройки"
+             xmlns:local="clr-namespace:Pazl2.ViewModels"  
+             xmlns:model="clr-namespace:Pazl2.Models" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc ="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Name="BrowseItemsPage"
+              
+             >
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>-->
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Выберите размер пазла:"/>
+            <Picker x:Name="Pickers" SelectedIndexChanged="Picker_SelectedIndexChanged" >
+                <Picker.Items>
+                    <x:String>3*3</x:String>
+                    <x:String>4*4</x:String>
+                    <x:String>5*5</x:String>
+                    <x:String>6*6</x:String>
+                    <x:String>7*7</x:String>
+
+                    <x:String>8*8</x:String>
+                    <x:String>9*9</x:String>
+                    <x:String>10*10</x:String>
+                    <x:String>11*11</x:String>
+                    <x:String>12*12</x:String>
+                    
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="BTN_IMG_Gel" Text="Выбрать изображение" Clicked="Button_Clicked"/>
+            <StackLayout x:Name="Url" IsVisible="false">
+                <Label Text="Откуда хотите взять картинку?"/>
+                <Entry x:Name="TextUrl" Placeholder="Введите адрес картинки" TextChanged="TextUrl_TextChanged" />
+
+            </StackLayout>
+            <Label Text="Откуда хотите взять картинку?"/>
+            <StackLayout>
+                <RadioButton Content="Из галереи"  x:Name="Galer" CheckedChanged="Galer_CheckedChanged" IsChecked="True"/>
+                <RadioButton Content="Из интернета" x:Name="Intern" CheckedChanged="Intern_CheckedChanged" />
+                <RadioButton Content="Стандартное изображение" x:Name="HolderImage" CheckedChanged="HolderImage_CheckedChanged" />
+            </StackLayout>
+            <Button x:Name="ewa" Text="Применить" Clicked="Button_Clicked_1" />
+            <Image x:Name="IMG" Source="vxcv.jpg" />
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
